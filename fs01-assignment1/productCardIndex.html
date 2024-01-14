@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Cards - Dark Mode</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #333;
+            color: #fff;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        header {
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+            background-color: #222;
+            color: #fff;
+            font-size: 1.5em;
+            border-bottom: 2px solid #444;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand-info {
+            text-align: left;
+        }
+
+        .brand-info h3 {
+            margin: 0;
+            font-size: 1.2em;
+        }
+
+        .brand-info p {
+            margin: 0;
+            color: #ccc;
+            font-size: 0.8em;
+        }
+
+        .search-bar {
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+            width: 200px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 10px;
+        }
+
+        .nav-links li {
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            font-size: 0.8em;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #e44d26;
+        }
+
+        .filter-search {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .login-button {
+            background-color: #e44d26;
+            color: #fff;
+            border: none;
+            padding: 8px;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-size: 0.8em;
+        }
+
+        .login-button:hover {
+            background-color: #555;
+        }
+
+        .product-card {
+            width: 300px;
+            background-color: #444;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+            overflow: hidden;
+            margin: 20px;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .product-card .card-content {
+            padding: 20px;
+        }
+
+        .product-card h2 {
+            margin-top: 0;
+            font-size: 1.5em;
+            color: #eee;
+        }
+
+        .product-card p {
+            color: #ccc;
+            line-height: 1.4;
+        }
+
+        .product-card .price {
+            color: #e44d26;
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .product-card .add-to-cart {
+            background-color: #e44d26;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+
+        .product-card .add-to-cart:hover {
+            background-color: #555;
+        }
+
+        @media (max-width: 600px) {
+            .product-card {
+                width: 100%;
+            }
+
+            .filter-search {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .search-bar {
+                width: 100%;
+            }
+        }
+
+        footer {
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+            background-color: #222;
+            color: #fff;
+            position: fixed;
+            bottom: 0;
+        }
+    </style>
+
+</head>
+<body>
+
+<header>
+    <div class="brand-info">
+        <h3>thriftNow</h3>
+        <p>Your favorite thrift store</p>
+    </div>
+    <div class="filter-search">
+        <input type="text" class="search-bar" placeholder="Search">
+        <ul class="nav-links">
+            <li><a href="">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Filter</a></li>
+        </ul>
+        <button class="login-button">Login</button>
+    </div>
+</header>
+
+<div class="product-card">
+    <img src="https://i.pinimg.com/564x/7c/c7/fa/7cc7fac8e1b46c9d57e9579757fe5132.jpg" alt="Product Image">
+    <div class="card-content">
+        <h2>Graphic Print Tshirt</h2>
+        <p>Oversized, Back Print Graphic Tee, Loose Streetwear T-shirt | @maheshdalle</p>
+        <div class="price">₹239</div>
+        <button class="add-to-cart">Add to Cart</button>
+    </div>
+</div>
+
+<div class="product-card">
+    <img src="https://i.pinimg.com/564x/60/a4/a2/60a4a200ab4d8a1d44bdae901eb26334.jpg" alt="Product Image">
+    <div class="card-content">
+        <h2>Nike Air Jordan 1 </h2>
+        <p>Retro High Og Blue Sneakers Retro Vintage Luxury Trendy Shoes | @thrift_love</p>
+        <div class="price">₹7,666</div>
+        <button class="add-to-cart">Add to Cart</button>
+    </div>
+</div>
+
+<div class="product-card">
+    <img src="https://i.pinimg.com/564x/3c/15/62/3c1562c9c35bfe23b8e65fdb24e8bf27.jpg" alt="Product Image">
+    <div class="card-content">
+        <h2>Shun Knife Set</h2>
+        <p>Classic White Knife Sets, edge retension super steel | @Crate&Barrel</p>
+        <div class="price">₹399.99</div>
+        <button class="add-to-cart">Add to Cart</button>
+    </div>
+</div>
+
+<div class="product-card">
+    <img src="https://i.pinimg.com/564x/c7/43/02/c74302443d8ae20618ab5e82c0ca1e25.jpg" alt="Product Image">
+    <div class="card-content">
+        <h2>Hercules Storm 2.0</h2>
+        <p>26 T Double Disc Brake Shock Absorption Carbon Steel | @Sprocket</p>
+        <div class="price">₹5,022</div>
+        <button class="add-to-cart">Add to Cart</button>
+    </div>
+</div>
+
+<div class="product-card">
+    <img src="https://i.pinimg.com/564x/d0/21/c9/d021c9479694eb519f7e791ebcf67ad9.jpg" alt="Product Image">
+    <div class="card-content">
+        <h2>Golf Bag Attachment</h2>
+        <p>Functional Golf Bag Attachment For Golf Cart Rear Seats waterproof ⎮ @RHOX</p>
+        <div class="price">₹1,500</div>
+        <button class="add-to-cart">Add to Cart</button>
+    </div>
+</div>
+
+<div class="product-card">
+    <img src="https://i.pinimg.com/564x/d1/c5/a3/d1c5a3ab278e69a4299c0b445a12430c.jpg" alt="Product Image">
+    <div class="card-content">
+        <h2>Plaid Vase</h2>
+        <p>2pcs Transparent Acrylic Flowers Container, Home Decorations | @aestheticgirl</p>
+        <div class="price">₹481</div>
+        <button class="add-to-cart">Add to Cart</button>
+    </div>
+</div>
+
+<div class="product-card">
+    <img src="https://i.pinimg.com/564x/1e/c6/f7/1ec6f7333882eccd6d98f484e3dd5a97.jpg" alt="Product Image">
+    <div class="card-content">
+        <h2>Dior Sunglasses</h2>
+        <p>Christian Dior Gold Hardware Frame with Purple Hue Sunglasses | @richneighbor</p>
+        <div class="price">₹37,045</div>
+        <button class="add-to-cart">Add to Cart</button>
+    </div>
+</div>
+
+<div class="product-card">
+    <img src="https://i.pinimg.com/564x/1a/c4/89/1ac489f00ad6f20d3e0c9e6c53b99c27.jpg" alt="Product Image">
+    <div class="card-content">
+        <h2>Lightshade</h2>
+        <p>Handwoven by talented artisans in Ghana and Rwanda | @cottonfieldOwner</p>
+        <div class="price">₹1,099.99</div>
+        <button class="add-to-cart">Add to Cart</button>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 thriftNow</p>
+</footer>
+
+<script>
+    window.onscroll = function() {
+        var footer = document.querySelector('footer');
+        if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+            footer.style.bottom = '0';
+        } else {
+            footer.style.bottom = '-50px';
+        }
+    };
+</script>
+
+</body>
+</html>
