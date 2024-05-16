@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon FanClub</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .navbar {
+            margin-bottom: 20px;
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        .carousel-inner img {
+            height: 500px;
+            object-fit: cover;
+        }
+
+        .carousel-caption {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .accordion-item {
+            margin-bottom: 10px;
+        }
+
+        .accordion-button {
+            font-weight: bold;
+        }
+
+        .accordion-body img {
+            float: left;
+            margin-right: 15px;
+            width: 100px;
+        }
+
+        .accordion-body {
+            text-align: justify;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+
+        .animate-button:hover {
+            animation: shake 0.5s;
+            animation-iteration-count: 1;
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
+            20%, 40%, 60%, 80% { transform: translateX(10px); }
+        }
+
+        .card {
+            margin-bottom: 20px;
+            border: 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card-img-top {
+            border-radius: 10px 10px 0 0;
+        }
+
+        .card-title {
+            font-weight: bold;
+        }
+
+        .footer {
+            background-color: #343a40;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">TCE</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Portfolio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Option 1</a></li>
+                            <li><a class="dropdown-item" href="#">Option 2</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Option 3</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="imageCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#imageCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#imageCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#imageCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://source.unsplash.com/800x400?pokemon" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h3>Pokemon Lore</h3>
+                    <p>Dive in to explore the Pokémon Universe</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://source.unsplash.com/800x400?charizard" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h3>New Collection!</h3>
+                    <p>Get the new <i>Twilight Masquerade</i> Cards early!</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://source.unsplash.com/800x400?pokeball" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h3>Daily Quiz</h3>
+                    <p>What do you know about pokéballs?</p>
+                    <button class="btn btn-primary animate-button" onclick="window.location.href='https://www.sporcle.com/games/Ellix/pokeball_pic'">Answer Quiz!</button>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#imageCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#imageCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <div class="container mt-4">
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Pikachu
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <img src="pikachu.png" class="img-fluid small-image" alt="Pikachu Image">
+                        Pikachu is an Electric-type Pokémon and is perhaps the most recognizable Pokémon, serving as the franchise's mascot. It evolves from Pichu when leveled up with high friendship and can further evolve into Raichu when exposed to a Thunder Stone. Pikachu is known for its ability to generate electricity stored in its cheeks and is often depicted as having a cheerful and playful demeanor.
+                        <button class="btn btn-primary mt-2" onclick="alert('This is an alert message.')">Know More</button>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Charizard
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <img src="charizard.png" class="img-fluid small-image" alt="Charizard Image">
+                        Charizard is the final evolution of Charmander, evolving from Charmeleon starting at level 36. It is a Fire/Flying-type Pokémon. Charizard resembles a large, orange dragon and is known for its powerful flame attacks. In various games, it can Mega Evolve into Mega Charizard X (Fire/Dragon) or Mega Charizard Y (Fire/Flying) using Charizardite X or Charizardite Y.
+                        <button class="btn btn-primary mt-2" onclick="alert('This is an alert message.')">Know More</button>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Bulbasaur
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <img src="bulbasaur.png" class="img-fluid small-image" alt="Bulbasaur Image">
+                        Bulbasaur is a dual-type Grass/Poison Pokémon. It evolves into Ivysaur starting at level 16, which evolves into Venusaur starting at level 32. Bulbasaur has a plant bulb on its back that grows into a large flower as it evolves. This bulb is a significant energy source for Bulbasaur, enabling it to perform various plant-based attacks.
+                        <button class="btn btn-primary mt-2" onclick="alert('This is an alert message.')">Know More</button>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        Eevee
+                    </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <img src="eevee.png" class="img-fluid small-image" alt="Eevee Image">
+                        Eevee is a Normal-type Pokémon known for its unique ability to evolve into multiple different forms, each corresponding to a different type. These evolutions include Vaporeon (Water), Jolteon (Electric), Flareon (Fire), Espeon (Psychic), Umbreon (Dark), Leafeon (Grass), Glaceon (Ice), and Sylveon (Fairy). This adaptability makes Eevee a very versatile Pokémon in battles.
+                        <button class="btn btn-primary mt-2" onclick="alert('This is an alert message.')">Know More</button>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFive">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        Snorlax
+                    </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <img src="snorlax.png" class="img-fluid small-image" alt="Snorlax Image">
+                        Snorlax is a large, Normal-type Pokémon known for its massive size and seemingly insatiable appetite. It spends most of its time sleeping and only wakes up to eat. Despite its lazy nature, Snorlax is incredibly strong and can be a formidable opponent in battles. Snorlax is known for its high HP and strong physical attacks.
+                        <button class="btn btn-primary mt-2" onclick="alert('This is an alert message.')">Know More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class=""mt-3>
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <a href="https://www.pokemon.co.jp/shop/en/pokecen/tokyodx/" target="_blank">
+                            <img src="https://source.unsplash.com/300x150?Tokyo" class="card-img-top" alt="Tokyo">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">Tokyo</h5>
+                            <p class="card-text">Explore the Pokémon Center Tokyo DX!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <a href="https://www.pokemon.co.jp/shop/en/pokecen/osaka/" target="_blank">
+                            <img src="https://source.unsplash.com/300x150?Osaka" class="card-img-top" alt="Osaka">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">Osaka</h5>
+                            <p class="card-text">Shop at the Pokémon Center Osaka</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <a href="https://www.pokemon.co.jp/shop/en/pokecen/yokohama/" target="_blank">
+                            <img src="https://source.unsplash.com/300x150?Yokohama" class="card-img-top" alt="Yokohama">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">Yokohama</h5>
+                            <p class="card-text">Join the parade at Yokohama Pokémon Center!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 TCE. All rights reserved.</p>
+    </div>
+</body>
+</html>
